@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE libreria [
+<!ELEMENT libreria (libro*, editorial)>
+<!ELEMENT editorial (#PCDATA)>
+<!ELEMENT libro (titulo, autor+)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+
+]>
+
+
+<libreria>
+	<libro>
+		<titulo>El cuco de cristal</titulo>
+		<autor>Javier Castillo</autor>
+	</libro>
+	<libro>
+		<titulo>Delito</titulo>
+		<autor>Carme Chaparro</autor>
+	</libro>
+	<editorial>Espasa</editorial>
+</libreria>

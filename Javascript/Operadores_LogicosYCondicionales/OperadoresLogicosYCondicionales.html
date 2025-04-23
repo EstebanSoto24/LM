@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Logicos y Condicionales - Esteban Soto</title>
+    <script>
+        // 1. Acceso a una web restringida
+
+        let ini_sesion = prompt("Has iniciado sesión, Introduce si o no: ").toLowerCase();
+
+        if (ini_sesion == "si" || ini_sesion == "sí") {
+            let admin = prompt("Eres Administrador, Introduce si o no: ").toLowerCase();
+
+            if (admin == "si" || admin == "sí") {
+                document.write("Accesso concedido.");
+            }
+        }else {
+            document.write("Accesso Denegado.");
+        }
+
+        document.write("<br>");
+        // 2. Entrada a un parque de atracciones
+
+        let edad = parseInt(prompt("Que edad tienes: "));
+
+        if (edad < 12 || edad > 65) {
+            document.write("Puede entrar gratis");
+        }else {
+            document.write("Debes pagar la entrada");
+        }
+        
+        document.write("<br>");
+        // 3. ¿Puedes participar en el concurso?
+        
+        edad = parseInt(prompt("Tu edad ?")); 
+        
+        if (edad >= 18 && edad <= 30){
+            let dni = prompt("¿Tienes el DNI en vigor?, Introduce si o no: ").toLowerCase();
+
+            if (dni == "si" || dni == "sí") {
+                document.write("Puedes participar en el concurso.");
+            }
+        }else {
+            document.write("No cumples los requisitos para participar.");
+        }
+    </script>
+</head>
+<body>
+    <header></header>
+    
+</body>
+</html>

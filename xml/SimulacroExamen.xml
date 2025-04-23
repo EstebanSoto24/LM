@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE refugio [
+    <!ELEMENT refugio (animal*,cuidadores+)>
+    <!ELEMENT animal (raza,nombre_animal,habitat,estado)>
+    <!ATTLIST animal fch_nacimiento NMTOKEN #IMPLIED>
+    <!ATTLIST animal cuidador IDREF #IMPLIED>
+    <!ELEMENT cuidadores (cuidador+)>
+    <!ATTLIST cuidadores tipo CDATA #REQUIRED>
+    <!ELEMENT cuidador (nombre_cuidador,apellido,telefono+)>
+    <!ATTLIST cuidador cod ID #REQUIRED>
+    <!ELEMENT raza (#PCDATA)>
+    <!ELEMENT nombre_animal (#PCDATA)>
+    <!ELEMENT habitat (#PCDATA)>
+    <!ELEMENT estado (#PCDATA)>
+    <!ELEMENT nombre_cuidador (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+    <!ENTITY estado "En proceso de recuperación, con vacunas y tratamientos administrados">
+]>
+
+
+<refugio>
+    <animal fch_nacimiento="09-08-2020" cuidador="c1">
+        <raza></raza>
+        <nombre_animal></nombre_animal>
+        <habitat></habitat>
+        <estado>&estado;</estado>
+    </animal>
+    <animal fch_nacimiento="01-07-2016">
+        <raza></raza>
+        <nombre_animal></nombre_animal>
+        <habitat></habitat>
+        <estado></estado>
+    </animal>
+    <animal cuidador="c2">
+        <raza></raza>
+        <nombre_animal></nombre_animal>
+        <habitat></habitat>
+        <estado></estado>
+    </animal>
+    <cuidadores tipo="salvajes">
+        <cuidador cod="c1">
+            <nombre_cuidador></nombre_cuidador>
+            <apellido></apellido>
+            <telefono></telefono>
+            <telefono></telefono>
+        </cuidador>
+    </cuidadores>
+    <cuidadores tipo="aves">
+        <cuidador cod="c2">
+            <nombre_cuidador></nombre_cuidador>
+            <apellido></apellido>
+            <telefono></telefono>
+            <telefono></telefono>
+        </cuidador>
+    </cuidadores>
+</refugio>

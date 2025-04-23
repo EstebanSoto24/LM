@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Repaso 3 - Esteban Soto</title>
+    <style>
+        span {
+            font-size: 25px;
+        }
+    </style>
+    <script>
+        /*  La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus clientes.Los ingredientes para cada tipo de pizza aparecen a continuación.
+            ● Ingredientes vegetarianos: Pimiento y tofu.
+            ● Ingredientes no vegetarianos: Peperoni, Jamón y Salmón. 
+        Escribir un programa que pregunte al usuario si quiere una pizza vegetariana o no, y en función de su respuesta le muestre un menú con los ingredientes disponibles para que elija. Solo se puede elegir un ingrediente además de la mozzarella y el tomate que están en todas las pizzas. Al final se debe mostrar por pantalla si la pizza elegida es vegetariana o no y todos los ingredientes que lleva.
+        */
+
+        let pedido = 0;
+        let seguir_N = 0;
+        let seguir_V = 0;
+        let pizza = "";
+        let ingrediente = "peperoni";
+
+        document.write("<span>NOTA:</span> Los ingredientes principales que no se pueden modificar y vienen agregados son Tomate y Mozarella, también solo podremos elegir 1 ingrediente adicional.");
+        document.write("<hr>")
+        
+
+        do {
+            pizza = prompt("Que tipo de pizza quieres?. V (vegetariana) N (no vegetariana)").toLowerCase();
+
+            if (pizza == "v") {
+                pedido = 0;
+                
+                do {
+                    ingrediente = prompt("Que ingrediente adicional quieres. P(Pimiento) T(Tofu)").toLowerCase();
+
+                    if (ingrediente == "p") {
+                        ingrediente = "pimiento";
+                        seguir_V = 0;
+                    } else if (ingrediente == "t") {
+                        ingrediente = "tofu";
+                        seguir_V = 0;
+                    } else {
+                        seguir_V = 1;
+                    }
+                } while (seguir_V == 1);
+
+                pizza = "Vegetariana"
+            } else if (pizza == "n") {
+                pedido = 0;
+                
+                do {
+                    ingrediente = prompt("Que ingrediente adicional quieres. P(Peperoni) J(Jamón) S(Salmón)").toLowerCase();
+                    if (ingrediente == "p") {
+                        ingrediente = "peperoni";
+                        seguir_N = 0;
+                    } else if (ingrediente == "j") {
+                        ingrediente = "jamón";
+                        seguir_N = 0;
+                    } else if (ingrediente == "s") {
+                        ingrediente = "salmón";
+                        seguir_N = 0;
+                    } else {
+                        seguir_N = 1;
+                    }
+                } while (seguir_N == 1)
+
+                pizza = "NO Vegetariana"
+            } else {
+                alert("Introduce correctamente el tipo de pizza. V(vegetariana) N(no vegetariana)");
+                pedido = 1;
+            }
+        } while (pedido == 1);
+
+        document.write(pizza + " " + ingrediente);
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

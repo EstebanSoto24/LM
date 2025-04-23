@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empezamos con Arrays - Esteban Soto</title>
+    <script>
+        /*
+        let alumnos = [];
+
+        let numAlumnos = parseInt(prompt("Dime un número de alumnos: "));
+            for (let i = 1; i <= numAlumnos; i++) {
+            let nombre = prompt("Nombre del alumno: ");
+            alumnos.push(nombre);
+        }
+
+        alert("Muestra los alumnos....." + alumnos);
+        alert("Quito a un alumno.....");
+        alumnos.pop();
+        alert("Muestro los alumnos otra vez....." + alumnos);
+
+        // Mostrar alumnos en lista
+        document.write("<ul>");
+        for (let i=0;i<alummos.length;i++) {
+            document.write(`<li>${alumnos[j]}</li>`)
+        }
+        document.write("</ul>");
+        */
+
+        // EJERCICIOS DE ARRAYS
+
+        // 1. Pide al usuaario un numero de notas a insertar y calcula la media de las notas, la nota másxima y la nota mínima.
+
+        let numnot = parseInt(prompt("Numero de notas a insertar: "));
+        let numeros = [];
+        let suma = 0;
+        let notamax;
+        let notamin;
+
+    
+        for (let i = 0; i < numnot; i++) {
+            numero = parseFloat(prompt("Introduce las notas una a una: "));
+            numeros.push(numero);
+        }
+
+        for (let i = 0; i <= numeros.length -1; i++) {
+            suma = suma+numeros[i];
+        }
+
+        document.write("La nota media de todas las notas es: " + suma/numnot);
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

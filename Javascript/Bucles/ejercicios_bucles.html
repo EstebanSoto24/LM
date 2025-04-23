@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Bucles - JavaScript</title>
+    <style>
+        #id1 {
+            background-color: whitesmoke;
+        }
+
+        table,
+        td,
+        th,
+        tr {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 5px;
+        }
+    </style>
+    <script>
+
+        // 1. Crea un programa que pida un número al usuario mediante prompt y luego muestre por consola su tabla de multiplicar del 1 al 10 usando un bucle for.
+        let num1 = parseInt(prompt("Introduce un número: "));
+
+        for (let i = 0; i <= 10; i++) {
+            let multi = i * num1;
+            console.log("La multiplicacion es: " + num1 + " X " + i + " = " + multi);
+        }
+        document.write("<hr>");
+        // 1. Hacer tabla de multiplicar del 1 al 10
+        let numero = 1
+
+        document.write("<table id = id1>");
+        for (let j = 1; j <= 10; j++) {
+            document.write("<tr>");
+            document.write(`<th>${j}</th>`);
+            for (let i = 0; i <= 10; i++) {
+                let result = i * j;
+                document.write(`<td>${j} x ${i} = ${result}</td>`);
+            }
+            document.write()
+        }
+        document.write("</table>");
+
+        document.write("<hr>");
+        // 2. Pide al usuarios un número N y usa un bucle while para calcular la suma de los primeros N números naturales.
+
+        let menu = 1;
+        while (menu == 1) {
+
+            let num1 = parseInt(prompt("Dime un número"));
+            let result = 0;
+
+            if (isNaN(num1)) {
+                alert("No has insertado un número")
+                menu = 1;
+            } else {
+
+                while (num1 != 0) {
+                    result = result + num1;
+                    num1 = num1 - 1;
+                }
+
+                document.write("El resultado es: " + result);
+                menu = 0;
+            }
+
+        }
+        document.write("<hr>");
+        // 3. Pide un número al usuario y muestra si el númmero es par o impar. Repite el proceso hasa que el usuario escriba la palabrta "FIN"
+        let pregunta = prompt("Dime un número. Escribe FIN para terminar");
+        while (pregunta != "FIN" && pregunta != "fin") {
+            let numero = parseInt(pregunta);
+            if (numero % 2 == 0) {
+                alert("Es par");
+            } else if (numero % 2 == 0) {
+                alert("Es impar");
+            } else {
+                alert("No es un número");
+            }
+            pregunta = prompt("Dime otro número. Escribe Fin para terminar");
+        }
+
+        document.write("<hr>");
+        // 4. pide una palabra al usuario y usa un bucle for para mostrarla al reves.
+
+        let palabra = prompt("Introduce una palabra");
+        let numero1 = palabra.length - 1;
+        let cadena = "";
+
+        for (let i = numero1; i >= 0; i--) {
+            cadena = cadena + palabra[i];
+        }
+
+        document.write("La cadena de texto al reves es: " + cadena);
+
+        document.write("<hr>");
+
+        // 5. Crea un programa que genere un número aleatorio entre 1 y 10. Luego, pide al usuarios que adivine el número. Si falla, sigue pidiéndole hasta que acierte. Usa un bucle do...while.
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+
+        }
+        let adivina = 0;
+        let num5 = (getRandomInt(11));
+
+        do {
+
+            adivina = parseInt(prompt("Adivina el número secreto: "));
+        } while (num5 !== adivina)
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

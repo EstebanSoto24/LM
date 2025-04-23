@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Repaso 4 - Esteban Soto</title>
+    <script>
+        let long1;
+        let long2;
+        let long3;
+        let triangulo = "";
+        let numero = true;
+
+        while (numero == true) {
+
+            long1 = parseInt(prompt("Introduce la longtud de un lado del triangulo"));
+            long2 = parseInt(prompt("Introduce la longtud de otro lado del triangulo"));
+            long3 = parseInt(prompt("Introduce la longtud de otro lado del triangulo"));
+
+            if (isNaN(long1) || isNaN(long2) || isNaN(long3)) {
+                numero = true;
+            } else {
+                numero = false;
+            }
+
+            if (numero == false) {
+                if (long1 < long2 + long3 && long2 < long1 + long3 && long3 < long2 + long1) {
+                    if (long1 == long2 && long1 == long3) {
+                        triangulo = "equilátero";
+                    } else if (long1 == long2 || long1 == long3 || long2 == long3) {
+                        triangulo = "isósceles";
+                    } else {
+                        triagulo = "escaleno";
+                    }
+                } else {
+                    alert("Con estos números no se puede formar un triangulo.");
+                    numero = true;
+                }
+            } else {
+                alert("Hay algo que no son números.");
+                numero = true;
+            }
+        }
+
+        if (triangulo == "equilátero") {
+            document.write("El triangulo es equilátero.");
+        } else if (triangulo == "isósceles") {
+            document.write("El triangulo es isósceles.");
+        } else {
+            document.write("El triangulo es escaleno.");
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

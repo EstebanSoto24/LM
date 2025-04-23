@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales y Operadores - Esteban Soto</title>
+    <link rel="JavaScript" href="script/CondicionalesYOperadores.js">
+    <script>
+
+        // 1. Control de acceso a sala
+        let edad = parseInt(prompt("Que edad Tienes: "));
+
+        if (edad >= 18) {
+            alert("Puedes entrar a la sala.");
+        }
+
+        // 2. ¿Has iniciado sesión? forma 1
+        let ini_sesion = parseInt(prompt("Introduce un boolean, 0 = false o mas de 1 = true"));
+
+        if (ini_sesion == true) {
+            alert("Bienvenido Usuario");
+        }
+
+        // 2. ¿Has iniciado sesión? forma 2
+
+        let inicio_sesion = (prompt("¿Iniciaste sesión?, Introduce si o no: ")).toLowerCase();
+        let ini_sesion2 = false;
+        if (inicio_sesion == "si") {
+            ini_sesion2 = true;
+            alert("Bienvenido Usuario");
+        }
+
+        // 2. ¿Has iniciado sesión? forma 3
+
+        let pregunta = prompt("Has iniciado sesión?").toUpperCase();
+        let sesion = false;
+        if (pregunta == "SI"|| pregunta == "SÍ") {
+            sesion = true;
+        }
+        if (sesion) {
+            alert("Bienvenido....");
+        }else {
+            alert("Prohibido");
+        }
+
+        // 3. ¿Tienes Mascota o No?
+        let mascota = prompt("Tienes Mascota, Introduce si o no: ").toLowerCase();
+
+        if (mascota == "si") {
+            document.write("!Qué bien¡ Las mascotas alegran la vida.");
+        } else {
+            document.write("!Seguro que también disfrutas de la tranquilidad¡");
+        }
+
+
+        // 4. Estado del dia según la hora
+        let hora = parseInt(prompt("Hora del dia (0 - 23): "))
+
+        if (hora >= 6 && hora <= 12) {
+            document.write("Buenos Dias"); hhasdf
+        } else if (hora >= 13 && hora <= 20) {
+            documen15
+            t.write("Buenas Tardes");
+        } else {
+            document.write("Buenas Noches");
+        }
+
+        // 5. Clasificación por tipo de clima
+        let temperatura = parseInt(prompt("Que temperatura hace: "));
+
+        if (temperatura < 10) {
+            document.write("Hace frio");
+        } else if (temperatura >= 10 && temperatura <= 25) {
+            document.write("El clima esta agradable");
+        } else if (temperatura > 25 && temperatura < 70){
+            document.write("Hace calor");
+        }else {
+            document.write("Esta temperatura no es válida.");
+        }
+
+        document.write("<br>")
+
+        // 6. Acceso a una zona VIP
+
+        let entrada = prompt("Tienes entrada para el evento").toLowerCase();
+
+        if (entrada == "si") {
+
+            let vip = prompt("Tienes acceso VIP para el evento")
+
+            if (vip == "si") {
+                document.write("Además de entrada, tienes acceso a la zona VIP.");
+            } else {
+                document.write("Tienes entrada para el envento")
+            }
+
+        } else {
+            document.write("No puedes entrar al evento.")
+        }
+
+        // 7. Día de la semana, usa la estructura switch-case
+
+        let dia_semana = prompt("Que dia de la semana es, escribe su nombre").toUpperCase();
+
+        switch (dia_semana) {
+            case "LUNES":
+                document.write("Animo, ya empieza la semana.");
+                break;
+            case "MIERCOLES":
+                document.write("Mitad de semana, ya queda menoss.");
+                break;
+            case "VIERNES":
+                document.write("Por fin viernesss.");
+                break;
+            case "SABADO" || "DOMINGO":
+                document.write("Es finde semana, disfruta.");
+                break;
+            default:
+                document.write("Ese día no existe.");
+                break;
+        }
+
+        document.write("<br>")
+        // 7. Dia de la semana, usa la estructura switch-case, Forma 2
+
+        let dia = new Date().getDay()
+
+        switch (dia) {
+            case 1:
+                document.write("Hoy es Lunes. ");
+                break;
+            case 2:
+                document.write("Hoy es Martes. ");
+                break;
+            case 3:
+                document.write("Hoy es Miercoles. ");
+                break;
+            case 4:
+                document.write("Hoy es Jueves. ");
+                break;
+            case 5:
+                document.write("Hoy es Viernes. ");
+                break;
+            case 6:
+                document.write("Hoy es Sabado. ");
+                break;
+            case 0:
+                document.write("Hoy es Domingo. ");
+                break;
+        }
+
+    </script>
+</head>
+
+<body>
+    <header></header>
+
+</body>
+
+</html>

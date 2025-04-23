@@ -1,0 +1,75 @@
+header {
+    background-color: aquamarine;
+    border: 0px solid lightcoral;
+    border-bottom: 3px solid black;
+    border-radius: 20px;
+}
+nav {
+    background-color: lightgray;
+    border: 0px solid lightcoral;
+    border-radius: 20px;
+}
+
+header li{
+    list-style-type: none;
+    padding: 10px 0px;
+}
+
+header h1 {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(63, 63, 63);
+    font-weight: bolder;
+}
+
+header nav ul li:nth-child(1) a {
+    color: black;
+}
+
+header nav ul li:nth-child(1) a:hover {
+    color: white;
+}
+
+nav a:hover {
+    color: white;
+}
+
+section h2 {
+    color: olive;
+    font-size: 40px;
+    margin-left: 15px;
+}
+section p {
+    margin-left: 15px;
+}
+section {
+    background-color: aquamarine;
+    border-radius: 20px;
+    border: 2px solid lightcoral;
+    margin-top: 10px;
+}
+
+table {
+    margin: 30px 0px 30px 30px;
+}
+
+
+th {
+    padding: 5px 70px;
+    text-align: center;
+    background-color: darkred;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: lightgreen;
+}
+table, td, tr, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

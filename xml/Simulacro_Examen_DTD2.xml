@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE refugio [
+    <!ELEMENT refugio (animal*,cuidadores+)>
+    <!ELEMENT animal (nombreAnimal, habitat)>
+    <!ATTLIST animal codigo ID #REQUIRED>
+    <!ATTLIST animal fecha_nacimiento CDATA #IMPLIED>
+    <!ATTLIST animal responsable IDREF #IMPLIED>
+    <!ELEMENT nombreAnimal (#PCDATA)>
+    <!ELEMENT habitat (#PCDATA)>
+    <!ELEMENT cuidadores (cuidador+)>
+    <!ELEMENT cuidador (nombreCuidador, apellidos, telefono)>
+    <!ELEMENT nombreCuidador (#PCDATA)>
+    <!ELEMENT apellidos (#PCDATA)>
+    <!ELEMENT telefono (#PCDATA)>
+    <!ATTLIST cuidador cod_empleado ID #REQUIRED>
+
+]>
+
+
+<refugio>
+    <animal codigo="A30" fecha_nacimiento="3-10-2009" responsable="P20">
+    <nombreAnimal>Lola</nombreAnimal>
+    <habitat>Desierto</habitat>
+    </animal>
+    <animal codigo="A32" fecha_nacimiento="20-10-2009" responsable="P21">
+    <nombreAnimal>Juan</nombreAnimal>
+    <habitat>Mar</habitat>
+    </animal>
+    <cuidadores>
+    <cuidador cod_empleado="P20">
+    <nombreCuidador>Carlos</nombreCuidador>
+    <apellidos>Prieto Delgado</apellidos>
+    <telefono>665032030</telefono>
+    </cuidador>
+    <cuidador cod_empleado="P21">
+    <nombreCuidador>Nuria</nombreCuidador>
+    <apellidos>López Rodriguez</apellidos>
+    <telefono>665032034</telefono>
+    </cuidador>
+    </cuidadores>
+    </refugio>

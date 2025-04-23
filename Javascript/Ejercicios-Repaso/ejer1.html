@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 de Repaso - Esteban Soto</title>
+    <script>
+        // Escribe un programa que nos diga si una persona puede acceder a cursar un ciclo formativo de grado superior o no. Para acceder a un grado superior, si se tiene un título de bachiller, en caso de no tenerlo, se puede acceder si hemos superado una prueba de acceso o si hemos realizado un ciclo formativo de grado medio. El programa hará las preguntas necesarias para dar la respuesta.
+
+        let bachiller = prompt("Tienes el titulo de bachiller. Si o No").toLowerCase();
+
+        if (bachiller == "si" || bachiller == "sí") {
+            alert("Enhorabuena Puedes acceder al Grado Superior");
+        } else {
+            let acceso = prompt("Tienes la prueba de acceso. Si o No").toLowerCase();
+
+            if (acceso == "si" || acceso == "sí") {
+                alert("Enhorabuena Puedes acceder al Grado Superior");
+            } else {
+                let medio = prompt("Tienes algún grado medio. Si o No").toLowerCase();
+
+                if (medio == "si" || medio == "sí") {
+                    alert("Enhorabuena Puedes acceder al Grado Superior");
+                } else {
+                    alert("Lo sentimos Sin ninguno de estos títulos no puedes entrar al grado Superior")
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

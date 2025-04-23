@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Ejemplo - Esteban Soto</title>
+    <script>
+        let opcion = prompt("A.Suma \nB.Resta \nC.Divide \nD.Salir").toUpperCase();
+        let num1 = parseInt(prompt("Introduce un número: "));
+        let num2 = parseInt(prompt("Introduce otro número: "));
+
+        while (opcion != "D") {
+            if (opcion == "A"){
+                alert("La suma es: " + (num1+num2));
+            } else if (opcion == "B") {
+                alert("La resta es: " + (num1-num2));
+            } else if (opcion == "C") {
+                alert("La division es: " + (num1/num2));
+            } else {
+                alert("No es una opción correcta");
+            }
+            opcion = prompt("A.Suma \nB.Resta \nC.Divide \nD.Salir").toUpperCase();
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

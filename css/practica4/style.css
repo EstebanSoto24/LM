@@ -1,0 +1,63 @@
+
+/* Lo que se mostrará por defecto */
+a:link {
+    color: yellow;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Se activa cuando se visita el link */
+a:visited {
+   text-decoration: none;
+   color: rgb(255, 132, 0); 
+}
+/* Se activa cuando paso por encima */
+a:hover {
+    color: olive; 
+    text-decoration:none;
+
+}
+/* Se activa cuando hace click */
+a:active {
+    color: Red;
+    text-decoration: none;
+}
+
+table, tr, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table {
+    margin-top: 50px;
+}
+
+th {
+    background-color: rgba(0, 255, 255, 0.671);
+    padding: 10px 30px;
+}
+
+/* Color de las filas pares */
+tr:nth-child(even) {
+    background-color: red;
+}
+/* Color de las filas inpares */
+tr:nth-child(odd) {
+    background-color: #489e48;
+}
+
+/* Ponemos una sombra al h1 */
+h1 {
+    text-shadow: 20px  10px 4px black;
+    text-align: center;
+}
+
+/* 
+Hacer una cajita con sombra 
+Primer valor sombra para el lado
+Segundo valor sombra para abajo
+Tercer valor Fuerza de la sombra
+Cuarto valor Color
+box-shadow: 5px 5px 90px black;
+*/

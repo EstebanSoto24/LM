@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Repaso 2 - Esteban Soto</title>
+    <script>
+        // Escribe un programa que te pida tu provincia de nacimiento. Si eres de Cádiz, tesaludará con un mensaje especial “Olé ahí pishita”, mientras que al resto de usuarios los saludará con un simple “Hola”. Posteriormente, te preguntará por el equipo de fútbol y si eres del Cádiz, te dará un mensaje tipo: “ánimo colega”, mientras que para el resto de equipos simplemente dirá “muy bien”. Ten en cuenta que por características de JS, todos los document.write se escriben al final.
+
+        let provincia = prompt("Cual es tu provincia de nacimiento");
+
+        if (provincia == "Cadiz" || provincia == "Cádiz") {
+            alert("Olé ahí pishita");
+        } else {
+            alert("Hola");
+        }
+
+        let equipo = prompt("Cual es tu equipo de futbol");
+
+        if (equipo == "Cadiz" || provincia == "Cádiz") {
+            alert("Ánimo Colega");
+        } else {
+            alert("Muy Bien");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

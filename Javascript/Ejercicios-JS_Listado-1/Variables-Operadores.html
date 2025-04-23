@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables y Operadores JavaScript - Esteban Soto</title>
+    <script>
+
+        // 1. Presentacion personal 
+        let nombre = prompt("Introduce tu nombre: ");
+        let edad = parseInt(prompt("Introduce tu edad: "));
+        let ciudad = prompt("Introduce tu ciudad: ");
+
+        document.write(`Hola, me llamo <strong>${nombre}</strong>, tengo <strong>${edad}</strong> años y vivo en <strong>${ciudad}</strong>.`);
+
+        // 2. Tu pelicula favorita 
+        let pelicula = prompt("Tu pelicula favorita es: ");
+        let anno_estreno = parseInt(prompt("Año de estreno de tu pelicula: "));
+
+        document.write(`<br> Mi pelicula favorita es <strong>${pelicula}</strong>, que se estrenó en <strong>${anno_estreno}</strong><br>`);
+
+        // 3. Bienvenido a un curso 
+        let nombre_curso = prompt("Nombre del curso:");
+        let nombre_profesor = prompt("Nombre del profesor");
+        let num_alumnos = parseInt(prompt("Numero de alumnos"));
+
+        document.write(`Bienvenidos al curso de <strong>${nombre_curso}</strong> con el profesor <strong>${nombre_profesor}</strong>. Somos <strong>${num_alumnos}</strong> alumnos.`);
+
+        // 4. Suma y diferencia de edades //
+        let edad1 = parseInt(prompt("Introduce la primera edad: "));
+        let edad2 = parseInt(prompt("Introduce la segunda edad: "));
+        let suma = edad1 + edad2;
+        if (edad1 >= edad2) {
+            let diferencia1 = edad1 - edad2;
+            document.write("<br>" + `La suma de nuestras edades es <strong>${suma}</strong> y la diferencia es <strong>${diferencia1}</strong>`);
+        } else {
+            let diferencia2 = edad2 - edad1;
+            document.write("<br>" + `La suma de nuestras edades es <strong>${suma}</strong> y la diferencia es <strong>${diferencia2}</strong>`);
+        }
+
+        // 5. Cálculo del área de un rectángulo 
+        let base = parseFloat(prompt("Base del rectángulo: "))
+        let altura = parseFloat(prompt("Altura del rectángulo: "))
+
+        document.write("<br>El area del rectángulo es: " + `${base * altura}`)
+
+        // 6. Conversión de euros a libras.
+        let euros = parseFloat(prompt("Cuantos euros Tienes: "));
+        let libras = euros * 0.84;
+
+        document.write("<br>" + `Tenemos <strong>${euros}</strong> en euros que serían <strong>${libras}</strong> libras.`)
+    </script>
+</head>
+
+<body>
+    <header></header>
+
+</body>
+
+</html>

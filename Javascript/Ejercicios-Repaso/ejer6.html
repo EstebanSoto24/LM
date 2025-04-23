@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Repaso 6 - Esteban Soto</title>
+    <script>
+        let inversion;
+        let interes;
+        let annos;
+        let seguir = true;
+
+
+        while (seguir == true) {
+            inversion = parseInt(prompt("Que cantidad de dinero invertirá: "));
+            if (inversion >= 100 && inversion <= 100000) {
+                seguir = false;
+            } else {
+                alert("Esta inverion no es valida, solo se puede de 100€ a 100000€.");
+                seguir = true;
+            }
+        }
+
+        seguir = true;
+
+        while (seguir == true) {
+            interes = parseInt(prompt("Que porcentaje de interes tendra."));
+            if (interes >= 0 && interes <= 99) {
+                seguir = false;
+            } else {
+                alert("Este interés no es válido, debe ser entre el 1% y el 99% de interes anual.");
+                seguir = true;
+            }
+        }
+
+        seguir = true;
+
+        while (seguir == true) {
+            annos = parseInt(prompt("A cuantos años es la inversion: "));
+            if (annos >= 1 && annos <= 20) {
+                seguir = false;
+            } else {
+                alert("La inversion como máximo puede ser de 20 años.");
+                seguir = true;
+            }
+        }
+
+        let result = inversion;
+        document.write("Inversion Inicial: " + result + "<br>")
+
+        let porcent = interes / 100 + 1;
+
+        for (let i = 1; i <= annos; i++) {
+            result = result * porcent.toFixed(2);
+            document.write("Año número " + i + ": " + result.toFixed(2) + "<br>");
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

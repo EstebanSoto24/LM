@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Repaso 7 - Esteban Soto</title>
+    <script>
+
+        let numero;
+        let vrd = true;
+
+        while (vrd == true) {
+            numero = parseInt(prompt("Dime un número entero: "));
+            if (isNaN(numero)) {
+                alert("Escribe un número, no otro carácter.");
+                vrd = true;
+            } else {
+                vrd = false;
+            }
+        }
+        for (let i = 1; i <= numero; i++) {
+            document.write("<br>");
+            for (let j = 0; j < i; j++) {
+                document.write(" * ");
+            }
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

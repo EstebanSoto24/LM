@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<agenda>
+    <personas>
+        <nombre id="Esteban">
+        <contacto>
+            <telef>633889900</telef>
+            <telef>609742320</telef>
+            <telef>652211444</telef>
+            <email>asdñlkj@gmail.com</email>
+        </contacto>
+        </nombre>
+        <nombre id="Juanca">
+        <contacto>
+            <telef>662734520</telef>
+            <telef>764273241</telef>
+            <email>jjfjfjfjfjf@gmail.com</email>
+            <email>asdñlkj@gmail.com</email>
+        </contacto>
+        </nombre>
+    </personas>
+</agenda>   

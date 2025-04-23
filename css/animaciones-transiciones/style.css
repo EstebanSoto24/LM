@@ -1,0 +1,45 @@
+h1:hover {
+    color: yellow;
+    background-color: aqua;
+    padding-left: 400px;
+    opacity: 0.2;
+    transition: color 3s, background-color 7s, padding-left 4s, opacity 10s;
+}
+
+/* Formularios */
+
+fieldset {
+    width: 50%;
+    margin-left: 10%;
+}
+
+input {
+    width: 50%;
+    height: 50%;
+    margin-top: 10px;    
+}
+input[name="nombre"] {
+    border-color: red;
+}
+
+input[type=submit] {
+    height: 30px;
+    width: 150px;
+    font-weight: bolder;
+    background-image: linear-gradient(to right, pink, rgba(159, 106, 245, 0.836), rgb(85, 209, 139), yellow);
+}
+
+input[type=checkbox] {
+    accent-color: aquamarine;
+
+}
+
+textarea {
+    /* Para no poder redimensionar la etiqueta textarea */
+    resize: none;
+}
+
+/* Focus es cuando pulsas para escribir */
+input:focus, textarea:focus{
+    background-color: bisque;
+}

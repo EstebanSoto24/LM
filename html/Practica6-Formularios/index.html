@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario completo</h1>
+    <form action="formulario_completo.html" method="post"><!--El método post es más seguro porque va cifrado-->
+        <fieldset>
+        <label for="nom">Escribe tu nombre: </label>
+        <input type="text" name="nom" placholder="usuario" required><br>
+        <label for="pas">Escribe una contraseña: </label>
+        <input type="password" name="pas" placeholder="password" required><br>
+        <hr>
+        <label for="sexo">Sexo:</label><br>
+        <input type="radio" name="sexo" value="h"> Hombre
+        <input type="radio" name="sexo" value="m"> Mujer
+        <input type="radio" name="sexo" value="n"> No definido <br>
+        <label for="localidad">Localidad:</label>
+        <select name="localidad">
+                <option value="01">Arcos de la frontera</option>
+                <option value="02">Jédula</option>
+                <option value="03" Selected>Bornos</option>
+                <option value="04">Ubrique</option>
+        </select>
+        </fieldset>
+
+        <fieldset>
+        <legend>Aficiones</legend>
+        <label for="hobbies">Hobbies:</label><br>
+        <input type="checkbox" name="deporte" valor="deporte" checked> Deporte
+        <input type="checkbox" name="cine" valor="cine"> Cine
+        <input type="checkbox" name="fotografia" value="fotografia"> Fotografía
+        <input type="checkbox" name="videojuegos" value="videojuegos" checked> Videojuegos 
+        <input type="checkbox" name="otros" value="otros"> Otros <br>
+        </fieldset>
+        <hr>
+        <textarea name="hobbies" cols="15" rows="1" placeholder="Describe brevemente tus aficiones"></textarea>
+        <hr>
+        <input type="submit" value="Enviar Datos">
+    </form>
+</body>
+</html>

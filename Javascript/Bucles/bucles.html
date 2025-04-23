@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles JavaScript - Esteban Soto</title>
+    <script>
+        /* Haz un rpograma que muestre la tabla de multiplicar del 1 al 10 del número insertado por el usuario*/
+        let num1 = parseInt(prompt("Inserta un número"));
+
+        for (let i = 0; i <= 10; i++) {
+            let multi = i * num1;
+            document.write(`${i}x${num1} = ` + multi + "<br>");
+        }
+
+        // Array
+
+        const letras = ['A', 'E', 'I', 'O', 'U'];
+
+        // For-Each
+
+        letras.forEach((i) =>
+            document.write("<br>" + i)
+        );
+
+        // For
+
+        for (let i = 0; i < letras.length; i++) {
+            document.write("<br>" + letras[i]);
+        }
+
+        // For-in
+
+        for (let i in letras) {
+            document.write("<br>" + letras[i]);
+        }
+
+        /* Haz un prgrama que dada una frase por el usuariosw, cuente el número de vocales. */
+
+        let frase = prompt("Introduce una frase").toUpperCase();
+        let cont_vocales = 0;
+
+        for (let i = 0; i < frase.length; i++) {
+            let letr = frase[i];
+
+            if (letras.includes(letr)) {
+                cont_vocales = cont_vocales + 1;
+            }
+        }
+        document.write("<br> El número de vocales que hay en la frase es: " + cont_vocales);
+
+        frase.forEach((i) =>
+            document.write("<br>" + i)
+        );
+
+    </script>
+</head>
+
+<body>
+    <header></header>
+
+</body>
+
+</html>

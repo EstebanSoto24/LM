@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays de Arrays JS - Esteban Soto</title>
+    <script>
+        // ARRAYS
+            let alumnos = [];
+            let numAlumnos = parseInt(prompt("Dime el número de alumnos"));
+
+            for (let i = 0; i < numAlumnos; i++) {
+                let nombre = prompt("Dime el nombre del alumno: ").toLowerCase();
+                let alumno = [nombre]; // Opción 1
+                /* Opción 2 
+                let alumno = []; 
+                alumno.push(nota); 
+                alumno.push(nombre);
+                */
+               alumnos.push(alumno);
+            }
+
+            for (let i = 0; i < numAlumnos; i++) {
+                let nota = parseFloat(prompt(`Dime la nota del alumno ${alumnos[i][0]}: `));
+                alumnos[i].push(nota);
+            }
+
+            let busqueda = prompt("Que alumno quieres buscar: ");
+
+            for (i in alumnos) {
+                if (alumnos[i][1] == busqueda) {
+                    alert("La nota del alumno " + alumnos[i][0] + " es " + nota);
+                }
+
+            }
+            // Solución Temporal
+            alert(alumnos);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

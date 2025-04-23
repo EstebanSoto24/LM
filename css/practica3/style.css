@@ -1,0 +1,66 @@
+body {
+    font-size: 12px;
+    color: #6a6766;
+    background-color: #f9fbd0;
+}
+
+h1 {
+    color: olive;
+    font-size: 15px;
+    text-align: center;
+}
+
+h1:hover {
+    color:pink;
+    font-size: 20px;
+}
+
+.div1 {
+    margin: 20px 50px 0px 50px;
+}
+
+.div2 h2 {
+    color: blue;
+    font-size: 1.2em;
+}
+
+.div2 p {
+    text-align: justify;
+    padding: 0px 30px 0px 30px;
+    word-spacing: 7px;
+    letter-spacing: 2px;
+}
+
+div a {
+    text-decoration: none;
+    color: #6e6968;
+}
+
+.div1 {
+    border-style: solid;
+    border-top-color: blue;
+    border-right-color: green;
+    border-left-color: green;
+    border-bottom-color: orange;
+    border-bottom-style: dotted; 
+    border-width: 2px;
+}
+
+.div2 {
+    margin-top: 20px;
+    border: 2px solid pink;
+    border-right-width: 0px;
+    border-left-width: 0px;
+}
+
+/*Estilos para las listas*/
+
+ul {
+    list-style-type: armenian;
+    list-style-type: none;
+    list-style-position: outside/inside;
+    list-style-image: url("carpeta/imagen.jpg");
+    border: 2px solid black;
+    background-color: black;
+    opacity: 0.7;
+}

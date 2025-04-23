@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Examen CSS</title>
+</head>
+<!-- NO TOCAR ESTE CÓDIGO HTML PARA NADA -->
+<body>
+    <div>
+        <div>
+            <h1>Grace Murray Hopper</h1>
+            <h2>Matemática e informática (1906 New York, 1992 Arlington, Virginia, EEUU)</h2>
+        </div>
+    </div>
+    <div class="datos">
+        <p>Grace Murray Hopper nació el 9 de diciembre de 1906, en Nueva York, y murió en Arlington, Virginia (USA) el 1 de enero de 1992. Grace Hopper fue un distinguido oficial de la marina estadounidense y una destacada científica computacional. Hopper fue uno de los programadores del primer gran ordenador, el Mark I. Su trabajo dió lugar al primer lenguaje compilador para ordenadores. También trabajó en el desarrolo del COBOL, uno de los primeros lenguajes de programación.
+        </p>
+
+        <p>Acuñó el término "bug" (chinche, bicho) para referirse a un error de programación, cuando descubrió una pequeña mariposa dentro de los circuitos que hacía cometer errores de ejecución. En 1973, aunque en la reserva, fue la primera mujer en llegar a capitán de navío de la marina estadounidense.
+        </p>
+
+        <p>
+        Aunque ya estaba retirada, fue llamada de nuevo al servicio activo de la marina en 1967. En 1983, fue nombrada Rear Admiral, y cuando de nuevo se retiró en agosto de 1986, era el oficial más viejo en activo de EEUU. Después de su retiro trabajó como consejero de la Digital Equipment Corporation hasta su muerte.
+        </p>
+    </div>
+<!-- Enlaces interesantes -->
+    <div>
+        <p>Aquí se presentan algunos enlaces interesantes:</p>
+        <a href="https://es.wikipedia.org/wiki/Grace_Murray_Hopper">Wikipedia</a><a href="https://biblioguias.uam.es/politecnica/exposiciones/mujeres-en-las-tic/Grace_Murray">Biblioguía</a><a href="https://forohistorico.coit.es/index.php/personajes/personajes-internacionales/item/hopper-grace-murray">Foro histórico de telecomunicaciones</a>
+    </div>
+<!-- Galería de imágenes -->
+<!-- Tabla con datos relevantes-->
+<table>
+    <caption>
+        Premios y reconocimientos       
+    </caption>
+    <thead>
+        <tr>
+            <th>Año</th>
+            <th>Reconocimiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1969</td>        
+            <td>Nombrada <em>Hombre del año</em> en ciencias de la computación</td>
+        </tr>
+        <tr>
+            <td>1973</td>        
+            <td>Primera mujer nombrada miembro distinguido de la British Computer Society</td>
+        </tr>
+        <tr>
+            <td>1986</td>        
+            <td>Tras su jubilación, recibió la Medalla de Servicio Distinguido de Defensa.</td>
+        </tr>
+        <tr>
+            <td>1991</td>        
+            <td>Medalla nacional de tecnología.</td>
+        </tr>
+    </tbody>
+</table>
+
+<p> Rellena el siguiente formulario si quieres recibir más información sobre personalidades del mundo de la informática</p>
+    <!-- Incluir formulario de contacto-->
+    <!-- Aquí puedes crear el código como quieras -->
+     <form action="" method="post">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required><br>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="Apellidos" name="apellidos" placeholder="Escribe tus apellidos" required><br>
+            <label for="email">E-mail</label>
+            <input type="email" id="Email" name="email" placeholder="Escribe un email válido" required>
+        </fieldset>
+        <fieldset>
+            <legend>Información de suscripción</legend>
+            <label for="inscrip">Fecha de fin de suscripción</label>
+            <input type="date" name="inscrip" id="inscrip"><br>
+            <label for="suscrip">Tipo de Suscripción</label><br>
+            <input type="radio" id="men" name="suscrip"><label for="men">Mensual</label>
+            <input type="radio" id="sem" name="suscrip"><label for="sem">Semanal</label>
+            <input type="radio" id="dia" name="suscrip"><label for="dia">Diaria</label><br>
+            <label for="color">Color de Fondo para la newsletter</label>
+            <input type="color" name="color"><br>
+            <label for="notis">Quiero recibir noticias sobre</label>
+            <select>
+                <option value="tec">Tecnología</option>
+                <option value="inf" selected>Informática</option>
+                <option value="fut">Futurismo</option>
+            </select><br>
+            <label for="participo">Quiero participar escribiendo articulos</label>
+            <input type="checkbox" name="participo" checked>
+        </fieldset>
+        <input type="submit" value="Enviar">
+     </form>
+</body>
+</html>

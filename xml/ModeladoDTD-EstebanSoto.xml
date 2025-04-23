@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Queremos almacenar en un fichero xml la información de los alumnos de la clase, 
+queremos guardar su nombre, apellidos, dirección y módulos en los que se ha matriculado.
+Utilizaremos para idenficiar el alumno como etiquete el numero de dni o el numero de expediente, uno o otro.
+Almacenaremos como atributos, el telefono, el lugar de residencia y la fecha de nacimiento, de tal modo que la fecha 
+de nacimiento si quieres no la dan, y se presupone que los alumnos viven en Arcos.
+-->
+<!DOCTYPE clase [
+    <!ELEMENT clase (alumno)*>
+    <!ELEMENT alumno ((id | num_expediente), nombre, apellidos*, direccion, modulos_matri*)>
+        <!ATTLIST alumno tlf CDATA #REQUIRED>
+        <!ATTLIST alumno residencia CDATA "Arcos">
+        <!ATTLIST alumno fch_naci CDATA #IMPLIED>
+    <!ELEMENT num_expediente (#PCDATA)>
+    <!ELEMENT id (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellidos (#PCDATA)>
+    <!ELEMENT direccion (#PCDATA)>
+    <!ELEMENT modulos_matri (#PCDATA)>
+]>
+
+
+<clase>
+    <alumno tlf="988776554" residencia="Arcos" fch_naci="01/04/2005">
+        <id>123123</id>
+        <nombre>Esteban</nombre>
+        <apellidos>Soto</apellidos>
+        <direccion>C/Colombia num 19</direccion>
+        <modulos_matri>Lenguaje de Marcas</modulos_matri>
+    </alumno>
+    <alumno tlf="133113323" residencia="Arcos">
+        <num_expediente>33445566</num_expediente>
+        <nombre>Carlos</nombre>
+        <apellidos>Prieto</apellidos>
+        <apellidos>Delgado</apellidos>
+        <direccion>C/Sevilla num 20</direccion>
+        <modulos_matri>Fundamentos del Hardware</modulos_matri>
+    </alumno>
+</clase>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción JavaScript - Esteban Soto</title>
+    <script>
+        /* Forma 1: En el propio documento*/
+        document.write("HOLA MUNDO" + "      ");
+        /* Forma 2: En ventana emergente*/
+        alert("HOLA MUNDO");
+        /* Froma 3: Por consola, para depurar*/
+        console.log("HOLA MUNDO");
+        /* Definicion de variables */
+        let nombre = "Esteban"; /* Tipo string cadena de texto */
+        let edad = 40; /* Tipo numérico sin decimales: int o entero */
+        let sueldo = 1500.30; /* Tipo numérico con decimales: float */
+        let mascota = false; /* boolean */
+        alert("El año que viene tendrás: " + (edad+1)); /* El operador + se usa para concatenar y para sumar */
+        /* Con las variables numericas se puede operar mediante los operadores matemáticos: ( + - / * ** % )*/
+        /* Pedir datos por pantalla */
+        let sueldo2 = prompt("Dime tu sueldo");
+        /* Otra forma */ 
+        let direccion;
+        direccion += /* += para agregar lo que sea a la variable sin machacarla*/ prompt("¿Dónde vives?");
+        /* Muestro los datos del usuario */
+        document.write("Sueldo 1: " + sueldo2);
+        document.write("Nombre y edad "+ nombre + " " + edad);
+        /* Por defecto el prompt coje un string, para que no lo haga debemos decirle al prompt que coja otro tipo de dato. */ 
+        let sueldoBien = parseInt(prompt("Dime tu sueldo"));
+        /* Se pueden poner etiquetas HTML dentro de los document.write */
+    </script>
+</head>
+<body>
+    <header></header>
+    
+</body>
+</html>

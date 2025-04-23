@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE alumno [
+    <!ELEMENT alumno (nombre,apellido+,repetidor?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT apellido (#PCDATA)>
+    <!ELEMENT repetidor EMPTY>
+]>
+
+<alumno>
+    <nombre>Sonia</nombre>
+    <apellido>Caro</apellido>
+    <apellido>Durán</apellido> 
+    <repetidor/>
+</alumno>

@@ -1,0 +1,176 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: yellow;
+    position: fixed;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    margin-top: -16px;
+    z-index: 20;
+}
+
+header h1 {
+    color: rgb(172, 172, 172);
+    opacity: 0.7;
+}
+
+nav {
+    position: relative;
+    background-color: rgb(95, 95, 95);
+    top: 84px;
+    height: 50px;
+    z-index: 10;
+}
+
+nav ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+nav ul li a:hover {
+    color: yellow;
+    font-weight: 900;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    z-index: 15;
+}
+
+.personajes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-top: 100px;
+}
+
+.personajes div {
+    position: relative;
+
+}
+
+.personajes div img {
+    z-index: 35;
+}
+
+.personajes div p {
+    position: relative;
+    bottom: 130px;
+    background-color: gray;
+    color: yellow;
+    padding: 7px;
+    border: 2px solid yellow;
+    border-radius: 10px;
+    width: 140px;
+    text-align: center;
+    z-index: 40;
+}
+
+.personajes div:nth-child(2) p {
+    position: relative;
+    bottom: 123px;
+}
+
+.personajes div:nth-child(1) p {
+    position: relative;
+    bottom: 135px;
+}
+
+.personajes div:nth-child(4) {
+    order: -1;
+}
+
+.curiosidades {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.curiosidades h2 {
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: rgb(54, 54, 54);
+    height: 50px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding-top: 7px;
+    }
+
+    nav {
+        height: 70px;
+    }
+
+    .personajes div {
+        position: relative;
+        width: 50%;
+    }
+
+    .personajes div img {
+        height: 100px;
+    }
+
+    .personajes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .personajes div p {
+        position: relative;
+        bottom: 100px;
+
+    }
+
+    .personajes div:nth-child(2) p {
+        position: relative;
+        bottom: 100px;
+    }
+
+    .personajes div:nth-child(1) p {
+        position: relative;
+        bottom: 100px;
+    }
+
+    aside h2 {
+        display: none;
+    }
+
+    aside p {
+        display: none;
+    }
+}

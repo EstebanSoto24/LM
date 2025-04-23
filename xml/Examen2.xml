@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE centro [
+<!ELEMENT centro (alumno*,ciclos)>
+	<!ELEMENT alumno (nombre_alumno,apellidos_alumno,direccion,municipio,tutor_legal*)>
+		<!ATTLIST alumno fch_nacimiento NMTOKEN #REQUIRED>
+		<!ATTLIST alumno id ID #REQUIRED>
+		<!ATTLIST alumno avisar (si | no | nc) "nc">
+		<!ATTLIST alummo modulos IDREFS #REQUIRED>
+	<!ELEMENT tutor_legal (nombre_tutor,apellidos_tutor,telefono)>
+		<!ATTLIST tutor_legal tutor (madre | padre) #IMPLIED>
+	<!ELEMENT ciclos (ciclo+)>
+		<!ELEMENT ciclo (modulo+)>
+			<!ATTLIST ciclo nombre CDATA #REQUIRED>
+			<!ATTLIST ciclo horario (mañana | tarde) #IMPLIED>
+			<!ELEMENT modulo (nombre_modulo,horas_semana)>
+				<!ATTLIST modulo nombre CDATA #REQUIRED>
+				<!ATTLIST modulo normativas NMTOKENS #REQUIRED>
+	<!ELEMENT nombre_alumno (#PCDATA)>
+	<!ELEMENT apellidos_alumno (#PCDATA)>
+	<!ELEMENT direccion (#PCDATA)>
+	<!ELEMENT municipio (#PCDATA)>
+	<!ELEMENT nombre_tutor (#PCDATA)>
+	<!ELEMENT apellidos_tutor (#PCDATA)>
+	<!ELEMENT telefono (#PCDATA)>
+	<!ELEMENT nombre_modulo (#PCDATA)>
+	<!ELEMENT horas_semana (#PCDATA)>
+<!ENTITY Arcos "Arcos De La Frontera">
+]>
+
+
+<centro>
+	<alumno fch_nacimiento="07-01-2005" id="a1" avisar="si" modulos="LM ISO">
+		<nombre_alumno>Carlos</nombre_alumno>
+		<apellidos_alumno>Prieto Delgado</apellidos_alumno>
+		<direccion>Calle Brasil num 30</direccion>
+		<municipio>&Arcos;</municipio>
+		<tutor_legal tutor="madre">
+			<nombre_tutor>Ana</nombre_tutor>
+			<apellidos_tutor>Lobo Garrido</apellidos_tutor>
+			<telefono>675255655</telefono>
+		</tutor_legal>
+	</alumno>
+	<alumno fch_nacimiento="05-03-2004" id="a2" avisar="si" modulos="GBD">
+		<nombre_alumno>Juan Carlos</nombre_alumno>
+		<apellidos_alumno>Mancera</apellidos_alumno>
+		<direccion>Calle Velazquez num 10</direccion>
+		<municipio>Jerez</municipio>
+		<tutor_legal tutor="madre">
+			<nombre_tutor>Estefania</nombre_tutor>
+			<apellidos_tutor>Durán Salguero</apellidos_tutor>
+			<telefono>656809231</telefono>
+		</tutor_legal>
+		<tutor_legal tutor="padre">
+			<nombre_tutor>Daniel</nombre_tutor>
+			<apellidos_tutor>Salguero Soto</apellidos_tutor>
+			<telefono>5442234776</telefono>
+		</tutor_legal>
+	</alumno>
+	<ciclos>
+		<ciclo nombre="ASIR" horario="mañana">	
+			<modulo nombre="LM" normativas="BOJA-139:01-08.2011">
+				<nombre_modulo>Lenguaje de Marcas</nombre_modulo>
+				<horas_semana>3</horas_semana>
+			</modulo>
+			<modulo nombre="ISO" normativas="BOJA-139:01-08.2011">
+				<nombre_modulo>Implantación de Sistemas Operativos</nombre_modulo>
+				<horas_semana>3</horas_semana>
+			</modulo>
+		</ciclo>
+		<ciclo nombre="DAM" horario="tarde">
+			<modulo nombre="GBD" normativas="BOJA-149:01-08.2011 BOJA-157:01-08.2011">
+				<nombre_modulo>Gestion de Base de Datos</nombre_modulo>
+				<horas_semana>6</horas_semana>
+			</modulo>
+		</ciclo>
+	</ciclos>
+</centro>

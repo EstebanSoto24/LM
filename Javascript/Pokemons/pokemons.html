@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Pokemons - Esteban Soto</title>
+    <script>
+        let bien = true;
+        let pokemons = [['Poplio', 'Agua', 60, 50], ['Litten', 'Fuego', 50, 40], ['Rowlett', 'Planta', 40, 70]];
+
+        let opcion = prompt('A. Insertar Pokemon \nB. Información Pokemon  \nC. Listar todos los Pokemon \nD. Contar Tipo \nE. Contar Total \nF. Luchar \nG. Salir').toUpperCase();
+
+        while (opcion != 'G') {
+            switch (opcion) {
+                case 'A':
+                    bien = true;
+                    let nombre = prompt("Dime su nombre: ");
+                    let tipo = prompt("Que tipo es (Agua, Fuego, Planta): ").toLowerCase();
+                    while (bien == true) {
+                        if (tipo == 'agua' || tipo == 'fuego' || tipo == 'planta') {
+                            bien = false;
+                        } else {
+                            bien = true;
+                            alert("Indica un tipo correcto (Agua, Fuego, Planta) ");
+                            tipo = prompt("Que tipo es (Agua, Fuego, Planta): ").toLowerCase();
+                        }
+                    }
+                    let vida = parseInt(prompt("Cuanta vida tiene: "));
+                    let ataque = parseInt(prompt("Cuanto ataque tiene: "));
+                    let pokemon = [nombre, tipo, vida, ataque];
+                    pokemons.push(pokemon);
+                    break;
+                case 'B':
+                    let buscarpok = 0;
+                    let buscarnombre = prompt("Que pokemon quieres ver, escribe su buscarnombre: ").toLowerCase();
+                    for (let i = 0; i < pokemons.length; i++) {
+                        if (buscarnombre == pokemons[i][0].toLowerCase()) {
+                            buscarpok = 1;
+                            alert("La información del pokemon " + buscarnombre + " es esta: " + pokemons[i]);
+                        }
+                    }
+                    if (buscarpok == 0) {
+                        alert("No encontramos ningun pokemon con ese nombre.");
+                    }
+                    break;
+                case 'C':
+                    for (let i = 0; i < pokemons.length; i++) {
+                        alert(pokemons[i]);
+                    }
+                    break;
+                case 'D':
+                    let cuentatipo = 0;
+                    let contartipo = prompt("De que tipo quieres buscar (Agua, Fuego, Planta): ").toLowerCase();
+                    if (contartipo == 'agua' || tipo == 'fuego' || tipo == 'planta') {
+                        for (let i = 0; i < pokemons.length; i++) {
+                            if (contartipo == pokemons[i][1].toLowerCase()) {
+                                cuentatipo = cuentatipo + 1;
+                            }
+                        }
+                        alert("Hay " + cuentatipo + " pokemons tipo " + contartipo);
+                    }
+                    break;
+                case 'E':
+                    let cuantos = 0;
+                    for (let i = 0; i < pokemons.length; i++) {
+                        cuantos = cuantos + 1;
+                    }
+                    alert("Hay " + cuantos + " pokemons en la pokedex");
+                    break;
+                case 'F':
+                    bien = true;
+                    let fuerzapok1 = 0;
+                    let fuerzapok2 = 0;
+                    let vidapok1 = 0;
+                    let vidapok2 = 0;
+                    let golpespok1 = 0;
+                    let golpespok2 = 0;
+                    let bienpokemon = 0;
+
+                    let pokemon1 = prompt("Que pokemon será el primero para luchar.").toLowerCase();
+                    while (bien == true) {
+                        for (let i = 0; i < pokemons.length; i++) {
+                            if (pokemon1 == pokemons[i][0].toLowerCase()) {
+                                bienpokemon = 1;
+                                vidapok1 = pokemons[i][2];
+                                fuerzapok1 = pokemons[i][3];
+                            }
+                        }
+                        if (bienpokemon == 0) {
+                            bien = true;
+                            alert("Este pokemon no está registrado en nuestro sistema.");
+                            pokemon1 = prompt("Que pokemon será el primero para luchar").toLowerCase();
+                        } else {
+                            bien = false;
+                        }
+                    }
+                    bienpokemon = 0;
+                    bien = true;
+                    let pokemon2 = prompt("Que pokemon será el segundo para luchar.").toLowerCase();
+                    while (bien == true) {
+                        for (let i = 0; i < pokemons.length; i++) {
+                            if (pokemon2 == pokemons[i][0].toLowerCase()) {
+                                bienpokemon = 1;
+                                vidapok2 = pokemons[i][2];
+                                fuerzapok2 = pokemons[i][3];
+                            }
+                        }
+                        if (bienpokemon == 0) {
+                            bien = true;
+                            alert("Este pokemon no está registrado en nuestro sistema.");
+                            pokemon2 = prompt("Que pokemon será el segundo para luchar").toLowerCase();
+                        } else {
+                            bien = false;
+                        }
+                    }
+                    bien = true;
+                    while (bien == true) {
+                        vidapok2 = vidapok2 - fuerzapok1;
+                        golpespok1 = golpespok1 + 1;
+                        if (vidapok2 <= 0) {
+                            bien = false;
+                            alert("La batalla termino, ganó " + pokemon1 + " y dio " + golpespok1 + " golpes");
+                        } else {
+                            vidapok1 = vidapok1 - fuerzapok2;
+                            golpespok2 = golpespok2 + 1;
+                            if (vidapok1 <= 0) {
+                                bien = false;
+                                alert("La batalla termino, ganó " + pokemon2 + " y dio " + golpespok2 + " golpes");
+                            }
+                        }
+                    }
+                    break;
+                default:
+                    alert("Elige una opción Correcta");
+                    break;
+            }
+            opcion = prompt('A. Insertar Pokemon \nB. Información Pokemon  \nC. Listar todos los Pokemon \nD. Contar Tipo \nE. Contar Total \nF. Luchar \nG. Salir').toUpperCase();
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

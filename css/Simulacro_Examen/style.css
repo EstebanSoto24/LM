@@ -1,0 +1,142 @@
+/* Cuerpo principal "Fondo" */
+body {
+    background-color: antiquewhite;
+    font-family: arial;
+    font-weight: 600;
+}
+
+
+
+/* Primer elemento de la página*/
+div div {
+    background-color: #626567;
+    box-shadow: 10px 40px 7px #CD5C5C;
+    height: 150px;
+    width: 800px;
+    margin-left: 500px;
+    padding: 0px 60px;
+    margin-bottom: 30px;
+    background-image: url(icono.png);
+    background-repeat: repeat-x;
+}
+
+h1 {
+    padding-top: 35px;
+    color: #CD5C5C;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #38edf3;
+}
+
+
+/* Parrafos Generales */
+p {
+    font-size: 16px;
+    color: black;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+p::first-letter {
+    font-size: 20px;
+    color: #CD5C5C;
+}
+
+
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    color: white;
+    border: 3px solid #CD5C5C;
+    margin: 10px;
+    border-radius: 0px 10px;
+    padding: 7px;
+    background-color: rgba(112, 128, 144, 0.336);
+}
+
+a:visited {
+    color: #CD5C5C;
+}
+
+a:hover {
+    background-color: gray;
+    color: white;
+    font-weight: 900;
+    transition-duration: 3s;
+}
+
+
+
+/* Tabla */
+caption {
+    font-style: italic;
+    caption-side: bottom;
+}
+
+table,
+th,
+td,
+tr {
+    margin-top: 40px;
+    margin-left: 50px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px 20px;
+}
+
+thead {
+    color: black;
+    background-color: #CD5C5C;
+    font-weight: 900;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #dce0e2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #38edf3;
+}
+
+/* Formulario */
+form {
+    margin-top: 30px;
+    margin-left: 10px;
+    font-family: verdana;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+input[name="nombre"],
+input[name="apellidos"],
+input[name="email"] {
+    border-color: red;
+    border-width: 2px;
+}
+
+fieldset {
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+legend {
+    font-style: italic;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    accent-color: #CD5C5Ced;
+}
+
+input[type=submit] {
+    background-color: #CD5C5C;
+    color: white;
+    margin-top: 10px;
+    height: 40px;
+    width: 70px;
+    border: 3px solid black;
+}

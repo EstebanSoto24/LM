@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Esteban Soto Salguero - 11/24">
+    <meta name="keywords" content="formulario, inicio, matriculacion, alumnos">
+    <meta name="description" content="Formulario de Matriculacion de Alumnos.">
+    <title>Formulario</title>
+</head>
+<body>
+    <h2>Formulario de Matriculación de Alumnos</h2>
+    <form action="hola .html" method="post">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label name="nombre">Nombre completo:</label><br>
+            <input type="text" name="nombre" placeholder="Ingrese el nombre completo"><br><br>
+            <label name="fecha_nac">Fecha de nacimiento:</label><br>
+            <input type="date" name="fecha_nac"><br><br>
+            <label name="email">Correo electrónico:</label><br>
+            <input type="email" name="email" placeholder="Ingrese el correo electrónico"><br><br>
+            <labe name="tlf">Número de teléfono: </labe><br>
+            <input type="text" placeholder="Ingrese el numero de teléfono"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Género</legend>
+            <input type="radio" name="genero" value="m"> Masculino <br>
+            <input type="radio" name="genero" value="f"> Femenino <br>
+            <input type="radio" name="genero" value="o"> Otro 
+        </fieldset>
+        <fieldset>
+            <legend>Curso a matricularse</legend>
+            <label>Seleccione un curso:</label><br>
+            <select name="Curso"> 
+                <option value="disble" disable>Seleccione un curso</option>
+                <option value="opc1">Opcion 1</option>
+                <option value="opc2">Opcion 2</option>
+                <option value="opc3">Opcion 3</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Aficiones</legend>
+            <input type="checkbox" name="Deporte" value="deporte" id="deporte"><label for="deporte">Deporte</label><br>
+            <input type="checkbox" name="Música" value="Música"> Musica <br>
+            <input type="checkbox" name="Lectura" value="Lectura"> Lectura <br>
+            <input type="checkbox" name="Arte" value="Arte"> Arte <br>
+        </fieldset>
+        <fieldset>
+            <legend>Comentarios adicionales</legend>
+            <label name="comentario">Escriba sus comentarios: </label><br>
+            <textarea name="comentario" cols="20" rows="6" placeholder="Escriba aqui cualquier comentario adicional..."></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Finalizar</legend>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </fieldset>
+    </form>
+</body>
+</html>
