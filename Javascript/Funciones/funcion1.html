@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones principales JS - Esteban Soto</title>
+    <script>
+        // Función que dados dos números te devuelve la media.
+
+        function media (num1,num2) {
+            let media = (num1 + num2)/2;
+            return media;
+        }
+
+        // Función que dado un array devuelve la media de los valores.
+
+        function mediaGlobal (datos) {
+            let suma = 0;
+            for (let i = 0; i < datos.length; i++) {
+                suma = suma +datos[i];
+            }
+            let media = suma/datos.length;
+            return media
+        }
+
+        // Función que dado un array devuelva el maximo
+
+        let numeros = [1, 200, 10, 12, 4, 7, 19, 17];
+
+        alert("El numero maximo del array es: " +  arraymax(numeros))
+
+        /*
+        // Programa principal
+        let nombre = prompt("Dime tu nombre");
+        let examen1 = parseFloat(prompt("Dime la nota del examen1: "));
+        let examen2 = parseFloat(prompt("Dime la nota del examen1: "));
+        
+        // alert("Tu media es: " + media (examen1,examen2))
+        
+        // Función mediaGlobal
+        let notas = [examen1, examen2];
+        // alert("Tu nota media es: " + mediaGlobal(notas));
+        */
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

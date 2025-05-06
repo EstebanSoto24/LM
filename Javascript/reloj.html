@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj</title>
+    <script>
+        let horas = 0;
+        let minuto = 0;
+        let seg = 0;
+        for (let i = 0; i <= 24; i++) {
+            horas = horas + 1;
+            for (let j = 0; j < 60; j++) {
+                minuto = minuto + 1;
+                for (let k = 0; k < 60; k++) {
+                    seg = seg + 1;
+                    document.write(horas + ":" + minuto + ":" + seg + "<br>");
+                }
+                seg = 0;
+            }
+            minuto = 0;
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

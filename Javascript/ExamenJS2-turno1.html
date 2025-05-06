@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen del turno 1 JS - Esteban Soto</title>
+    <script>
+        function cuenta(datos) {
+            let suma = 0;
+            for (i in datos) {
+                suma = suma + datos[i]
+            }
+            return suma;
+        }
+
+        let tareas = [['Repasar tema', 'ESTUDIOS', 30], ['Ejercicios Fuerza', 'PERSONAL', 40], ['Hacer esquema', 'ESTUDIOS', 20]];
+
+        let opcion = prompt("Introduce una opción \n A. Insertar tarea \n B. Tareas de un tipo \n C. Contar tareas de un tipo \n D. Mostrar tareas largas \n E. Tiempo por tipo \n F. Salir").toUpperCase();
+
+        while (opcion != 'F') {
+            let bien = 0;
+            if (opcion == 'A') {
+                let nombre = prompt("Dime el nombre de la tarea");
+                let tipo = prompt("Indica el tipo").toUpperCase();
+                let duracion = parseInt(prompt("Indica la duración en minutos: "));
+                let tarea = [nombre, tipo, duracion]
+                tareas.push(tarea);
+            } else if (opcion == 'B') {
+                bien = 0;
+                let categoria = prompt("Dime una categoria").toUpperCase();
+                let mensaje = "";
+                for (let i in tareas) {
+                    if (tareas[i][1].toUpperCase() == categoria) {
+                        mensaje = mensaje + tareas[i][0] + "\n"
+                        bien = 1;
+                    }
+                }
+                if (bien == 0) {
+                    alert("Esta categoria no existe");
+                } else {
+                    alert("Las tareas de esa categoria son: \n" + mensaje);
+                }
+            } else if (opcion == 'C') {
+                bien = 0;
+                let cont = 0;
+                let categoria = prompt("Dime una categoria").toUpperCase();
+                for (let i in tareas) {
+                    if (tareas[i][1].toUpperCase() == categoria) {
+                        cont = cont + 1;
+                        bien = 1;
+                    }
+                }
+                if (bien == 0) {
+                    alert("Esta categoria no existe");
+                } else {
+                    alert("El numero de tareas de esta categoria son: " + cont);
+                }
+            } else if (opcion == 'D') {
+                bien = 0;
+                let mensaje = "";
+                for (let i in tareas) {
+                    if (tareas[i][2] > 60) {
+                        mensaje = mensaje + tareas[i][0] + "\n"
+                        bien = 1;
+                    }
+                }
+                if (bien == 0) {
+                    alert("Esta categoria no existe");
+                } else {
+                    alert("Las tareas con mas de 60 minutos de duracion son: \n" + mensaje);
+                }
+            } else if (opcion == 'E') {
+                let categoria = prompt("Dime una categoria").toLowerCase();
+                let duraciones = [];
+                for (let i in tareas) {
+                    if (tareas[i][1].toLowerCase() == categoria) {
+                        duraciones.push(tareas[i][2]);
+                        bien = 1;
+                    }
+                }
+                if (bien == 0) {
+                    alert("Esta categoria no existe");
+                } else {
+                    alert("El total de tiempo del tipo " + categoria + " es de " + cuenta(duraciones) + " minutos");
+                }
+            } else if (opcion == 'G') {
+                bien = 0;
+                let nombretarea = prompt("Dime una tarea").toLowerCase();
+                for (let i in tareas) {
+                    if (tareas[i][0].toLoweCase() == nombretarea) {
+                        tareas[i][2] = 300;
+                        // Otra forma
+                        tareas[i].pop();
+                        tareas[i].push(300);
+                        bien = 1;
+                    }
+                }
+                if (bien == 0) {
+                    alert("No hay ninguna tarea con este nombre.");
+                } else {
+                    alert("La tarea se realizo correctamente.");
+                }
+            } else {
+                alert("Opción no valida");
+            }
+
+            opcion = prompt("Introduce una opción \n A. Insertar tarea \n B. Tareas de un tipo \n C. Contar tareas de un tipo \n D. Mostrar tareas largas \n E. Tiempo por tipo \n F. Salir").toUpperCase();
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
