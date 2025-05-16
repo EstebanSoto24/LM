@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 DOM JS - Esteban Soto</title>
+</head>
+<script>
+    function ejecutaDOM(){
+        let etiqueta = document.getElementById("etiqueta").value;
+
+        let nodo = document.createElement(etiqueta);
+        let texto = document.getElementById("contenido").value; // .value nos devuelve lo que se ha escrito en un formaulario.
+        let contenido = document.createTextNode(texto);
+        nodo.appendChild(contenido);
+        document.body.appendChild(nodo)
+    }
+</script>
+<body>
+    <form action="" method="post">
+        <label name="etiqueta" for="etiqueta">Tipo de etiqueta: </label>
+        <select name="etiqueta" id="etiqueta">
+            <option value="h1">h1</option>
+            <option value="h2">h2</option>
+            <option value="p">parrafo</option>
+        </select>
+        <label name="contenido" for="contenido">Contenido: </label>
+        <input type="text" id="contenido" name="contenido" placeholder="Escribe lo que sea"><br>
+        <input type="button" onclick="ejecutaDOM()" value="Insertar">
+    </form>
+
+</body>
+</html>

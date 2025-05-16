@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicando con DOM</title>
+</head>
+<body>
+    <div id="visitar">
+ 
+    </div>
+    <div id="visitados">
+        <p>Países visitados</p>
+        <ol>
+            <li>Alemania</li>
+            <li>Francia</li>
+            <li>Argentina</li>
+            <li>México</li>
+            <li>Tailandia</li>
+        </ol>
+    </div>
+    <script>
+
+        /* Inserte un párrafo en el primer div que indique “Países para visitar” */
+        var div1 = document.getElementById("visitar");
+        var par = document.createElement("p");
+        var contenido = document.createTextNode("Países para visitar");
+        par.appendChild(contenido);
+        div1.appendChild(par);
+
+        /* Inserta un listado con los siguientes elementos, debajo del contenido del punto anterior*/
+        var ul = document.createElement("ul");
+        var li1 = document.createElement("li");
+        var c1 = document.createTextNode("Canadá")
+        var li2 = document.createElement("li");
+        var c2 = document.createTextNode("Japón")
+        var li3 = document.createElement("li");
+        var c3 = document.createTextNode("Rumanía")
+        
+        li1.appendChild(c1);
+        li2.appendChild(c2);
+        li3.appendChild(c3);
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        ul.appendChild(li3);       
+        
+        div1.appendChild(ul);
+
+        /* Borra el segundo elemento del listado del segundo div*/
+        var div2 = document.getElementById("visitados");
+        var listado = div2.getElementsByTagName("li");
+        listado[1].parentNode.removeChild(listado[1]);
+
+        /* Indica los elementos que hay en cada uno de los listados */
+        /* Cada listado está en un div, accedo a los div y dentro de estos a los li */
+
+        var divs = document.getElementsByTagName("div");
+        for (i=0;i<divs.length;i++){
+            var listado = divs[i].getElementsByTagName("li");
+            document.write("Hay "+listado.length+" elementos en el div "+i+"<br>");            
+        }
+
+        /* Haz que aparezca un mensaje del tipo “Hay 3 elementos en Países para visitar” */
+        div1 = document.getElementById("visitar");
+        var listado1 = div1.getElementsByTagName("li");
+        var parrafos = div1.getElementsByTagName("p");
+        var texto = parrafos[0].textContent;
+        document.write("Hay "+listado1.length+" elementos en "+texto); 
+
+        /*Añade un elemento más al listado primero(países para visitar) con el texto “Dinamarca”*/
+        var li_nuevo = document.createElement("li");
+        var c_nuevo = document.createTextNode("Dinamarca")
+        var uls = div1.getElementsByTagName("ul");
+        li_nuevo.appendChild(c_nuevo);
+        uls[0].appendChild(li_nuevo);
+
+        /* Inserta una imagen dentro del primer div */
+        var img = document.createElement("img");
+        img.src = "nombre_imagen.jpg";  // Reemplaza con la ruta de tu imagen
+        img.alt = "Descripción de la imagen"; // Reemplaza con la descripción de tu imagen
+        div1.appendChild(img);
+
+    </script>
+</body>
+</html>

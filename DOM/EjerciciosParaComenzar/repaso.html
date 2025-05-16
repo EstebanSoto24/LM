@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de ejercicios para comenzar con DOM - Esteban Soto</title>
+    <style>
+        .green {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
+        button {
+            margin: 10px;
+        }
+        h2 {
+            color: red;
+        }
+        body:hover {
+            background-color: red;
+            
+        }
+    </style>
+    <script>
+        let tamanno = 20;
+        function cambiarBalon(baloncillo) {
+            baloncillo.innerHTML = "No hay balones";
+        }
+        // 2. Manipular clases de un elemento
+        function cambiarColor(nombre){
+            nombre.className = "green";
+        }
+        // 4. Manejar Eventos
+        function mensaje(element){
+            element = element.innerHTML;
+            alert("Has pulsado el elemento con texto " + element);
+        }
+        // 6. Cambiar color de fondo al hacer clic
+        function colorFondo(cuerpo){
+            cuerpo.setAttribute("style", "background-color: pink;")
+        }
+        // 7. Alternar estilos con un boton
+        function alternarColor(parrafo){
+            let color = parrafo.className;
+            if (color == "green")
+                parrafo.setAttribute("class", "red");
+            else    
+                parrafo.setAttribute("class", "green");
+        }
+        // 8. Modificacion de tamaño de texto.
+        function mayorTamanno(){
+            let parrafo = document.getElementById("fran");
+            parrafo.setAttribute("style", `font-size: ${tamanno + 10}px`);
+            tamanno = tamanno + 10;
+        }
+        function menorTamanno(){
+            let parrafo = document.getElementById("fran");
+            parrafo.setAttribute("style", `font-size: ${tamanno - 10}px`);
+            tamanno = tamanno - 10;
+        }
+        // 9. Cambiar visibilidad de un elemento
+        function desaparecer(){
+            let titulo = document.getElementById("titulo");
+            if (titulo.style.visibility == "hidden") {
+                titulo.setAttribute("style", "visibility: visible;");
+            } else {
+                titulo.setAttribute("style", "visibility: hidden;");
+            }
+        }
+        // 10. Animación simple al cargar la página
+        function animacionSimple(){
+            document.body.style = ":hover; transition: 3s;";
+        }
+
+        addEventListener("DOMContentLoaded", animacionSimple);
+    </script>
+</head>
+<body>
+<!--<body onclick="colorFondo(this)"</body>-->
+    <h1>Hola buenas tardes</h1>
+    <p id="mejor">Vinicius</p>
+    <p class="red" onclick="cambiarColor(this)">Rodrigo</p>
+    <p ondblclick="mensaje(this)">Valverde</p>
+    <p class="" onclick="alternarColor(this)">Arda</p>
+    <div>
+        <ul>     
+            <li id="balon" onclick="cambiarBalon(this)">balon</li>
+            <ol>
+                <li>hola</li>
+                <li>adios</li>
+            </ol>
+            <li>Porteria</li>
+            <li>Centro</li>
+        </ul>
+    </div>
+    <a href="www.google.com" >hola</a><br>
+    <button onclick="mayorTamanno()">mayor tamaño</button><button onclick="menorTamanno()">menor tamaño</button>
+    <script>
+        // 1. Cambiar el texto de un elemento
+        let element = document.getElementById("mejor");
+        element.innerHTML = "Mbappe";
+
+        // 3. Crear un nuevo elemento
+        let contenido = document.createTextNode("Fran Garcia")
+        let etiqueta = document.createElement("p");
+        etiqueta.appendChild(contenido);
+        document.body.appendChild(etiqueta);
+        
+
+        // 5. Modificar atributos
+        let imagen = document.getElementsByTagName("a");
+        imagen[0].href = "www.amazon.es"
+
+        // Probando querySelector()
+        let lista = document.querySelectorAll("div ul ol li");
+        for (i in lista) {
+            lista[i].innerHTML = "adios amigo";
+        }
+
+    </script>
+    <button onclick="desaparecer()">Me desaparezco</button>
+    <h2 id="titulo">Titulo que desaparecera</h2>
+</body>
+</html>

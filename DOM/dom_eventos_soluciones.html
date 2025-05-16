@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos con DOM</title>
+    <style>
+        #principal {width: 100%; height: 100px; border: 1px solid black;}
+        .visible {display: inline;}
+        .oculto {display: none;}
+    </style>
+    <script>
+
+        /* Ejercicio 1*/
+        function movimiento(evento){
+            document.getElementById("contenido").innerHTML = "El ratón se mueve por la coordenada X:"+evento.pageX+" y la coordenada Y:"+evento.pageY;            
+        }
+
+        /* Ejercicio 2. Cambia el color de la página cada vez que pulses el botón derecho del ratón sobre la web*/
+        let i=0;
+        let colores = ["red","blue","grey","green"];
+        function cambiarColor(evento, pagina){
+            if (evento.button=="2"){
+                pagina.style.backgroundColor=colores[i];
+                i = (i+1)%colores.length /* para que cuando llegue a la longitud máxima vuelva a empezar por el cero*/
+            }
+        }
+
+        /* Ejercicio 3. Muestra una imagen (la imagen no existe, debes crearla con DOM) al pulsar la tecla I y borrarla al pulsar la tecla D.*/
+        function muestraImagen1(evento){
+            if (evento.key == "D" || evento.key == "d"){
+                /* Borro la imagen */
+                var imagenes = document.getElementsByTagName("img");
+                /* Supongo que lo hago una sola vez y borro la primera */
+                imagenes[0].parentNode.removeChild(imagenes[0]);
+            } else if (evento.key == "I" || evento.key == "i"){
+                /* Inserto una imagen */
+                var mi_imagen = document.createElement("img");
+                mi_imagen.src = prompt("Dime el nombre de la imagen y su extensión, ejemplo: gato.png");
+                document.body.appendChild(mi_imagen);
+                /* No uso createTextContent porque la etiqueta imagen en HTML no tiene contenido sino atributos */
+            }    
+        }
+ 
+        /*Haz lo mismo pero con una imagen existente en la web para ello en lugar de trabajar con la inserción de elementos nuevos debes cambiar el CSS de la imagen.*/
+        function muestraImagen2(evento){
+            if (evento.key == "D" || evento.key == "d"){
+                /* Borro la imagen, para ello cambio la clase */
+                document.getElementById("imagenes").className = "oculto";
+            } else if (evento.key == "I" || evento.key == "i"){
+                /* Inserto una imagen, para ello pongo la clase visible*/
+                document.getElementById("imagenes").className = "visible";
+            }    
+        }
+    </script>
+</head>
+<!-- En el body debo poner el método onkeydown="muestraImagen1(event) para hacer el ejercicio 3 -->
+<body onmousedown="cambiarColor(event,this)" onkeydown="muestraImagen2(event)">
+<!-- Crea un DIV con un ancho de 100% y un alto de 100px y haz, mediante DOM que aparezca la información de las coordenadas del mismo al moverse con el ratón por encima y nos muestre las mismas en otro div inferior.
+-->
+<div id="principal" onmousemove="movimiento(event)">
+
+</div>
+<div id="contenido">
+    
+</div>
+<div id="imagenes">
+    <img src="logo.jpeg">
+</div>
+
+</body>
+</html>

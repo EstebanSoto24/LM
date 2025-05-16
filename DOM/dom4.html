@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 3 JS - Esteban Soto</title>
+    <script>
+        /* Version 1
+        function borrarParrafo(mievento){
+            if (mievento.key == "K" || mienvento.key == "k"){
+                let numero = parseInt(prompt("¿Que parrafo quieres borrar?"));p
+                let parrafos = document.getElementsByTagName("p");
+                if (numero > 0 && numero < parrafos.length){
+                    parrafos[numero - 1].parentNode.removeChild(parrafos[numero - 1])
+                } else {
+                    alert("Ese número de párrafo no existe.");
+                }
+            }
+        }
+        */
+        /* Version 2
+        function borrarParrafo(mievento){
+            let numero = mievento.key;
+            let parrafos = document.getElementsByTagName("p");
+            if (numero > 0 && numero < parrafos.length){
+                parrafos[numero - 1].parentNode.removeChild(parrafos[numero - 1])
+            } else {
+                alert("Ese número de párrafo no existe.");
+            }
+        }
+        */
+        function borrarParrafo() {
+            let numero =parseInt(mievento.key)
+            if (isNaN(numero)) {
+                alert("No has pulsado un número");
+            } else {
+                let parrafos = document.getElementsByTagName("p");
+                if (numero<=0 || numero>parrafos.length){
+                    alert("Ese número de parrafo no existe.");
+                } else {
+                    parrafos[numero-1].parentNode.removeChild(parrafos[numero-1]);
+                }
+            }
+        }
+    </script>
+</head>
+<body onkeypress="borrarParrafo(event)">
+    <p>Parrafo 1</p>
+    <p>Parrafo 2</p>
+    <p>Parrafo 3</p>
+    <p>Parrafo 4</p>
+    <p>Parrafo 5</p>
+    <p>Parrafo 6</p>
+    <div>
+        <p>Parrafo distinto</p>
+    </div>
+
+</body>
+</html>

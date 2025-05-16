@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css" rel="stylesheet">
+        .uno{
+            color : green;
+            background-color: blue;
+        }
+        .dos{
+            color : red;
+            background-color: rgb(64, 255, 0); 
+        }
+    </style>
+    <script>
+        let construido = false;
+
+        function aumentar(elemento){
+            elemento.style.fontSize = "20px";
+        }
+
+        function transformar(boton){
+           /* boton.style.backgroundColor="red";*/
+            boton.className ="dos";
+            var imagenes =document.getElementsByTagName("img");
+            imagenes[0].src="gato2.jpeg";
+            imagenes[0].alt="Imagen de otro gato";
+            if (!construido){
+                var nodo = document.createElement("p");
+                var texto = prompt("Dime el texto a introducir");
+                var contenido = document.createTextNode(texto);
+                nodo.appendChild(contenido);
+                var midiv = document.getElementById("nuevotexto");
+                midiv.appendChild(nodo);
+                construido = true;
+            }
+            
+            
+        }
+    </script>
+</head>
+<body>
+    <p onmouseover="aumentar(this)"> Contenido</p>
+    <img src="gato1.jpeg" alt="imagen de un gato">
+    <br>
+    <div id="nuevotexto"></div>
+    <input class="uno" type="button" value="Pulsa aquí" onclick="transformar(this)">
+</body>
+</html>

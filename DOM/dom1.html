@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empezamos con DOM - Esteban Soto</title>
+</head>
+<style>
+    .roja {
+        color: red;
+        font-size: 14px;
+    }
+    .verde {
+        color: green;
+        font-size: 24px;
+    }
+</style>
+<script>
+    function cambiar(h1){
+        h1.style = "color: green;";
+    }
+</script>
+<body> 
+    <h1 style="color: blue; " id="titulo" onclick="cambiar(this)">HOLA</h1>
+    <p class="roja">Un párrafo</p>
+    <p class="roja">Otro párrafo</p>
+    <a href="https://www.google.es" id="enlace">Pincha aquí</a>
+    <script>
+        // Acceso a un elemento
+        let miH1 = document.getElementById("titulo");
+        let nombre = prompt("Dime tu nombre: ");
+        miH1.innerHTML = miH1.innerHTML + " " + nombre;
+        let parrafos = document.getElementsByTagName("p");
+        for (i in parrafos) {
+        parrafos[i].innerHTML = parrafos[i].innerHTML + " " + nombre;
+        }
+        parrafos[0].className = "verde";
+        // Cambio del atributo href del enlace.
+        let mienlace =document.getElementById("enlace");
+        mienlace.href = "https://www.amazon.es";    
+        // Cambio el color del h1
+        miH1.style = "color: red;";
+    </script>
+</body>
+</html>

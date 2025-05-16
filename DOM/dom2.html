@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 DOM JS - Esteban Soto</title>
+</head>
+<body>
+    <h1>Bienvenido</h1>
+    <div id="principal">p <br></div>
+    <script>
+        // INSERCIÓN DE ELEMENTOS CON DOM
+        /* PASOS
+            - Crear nodo
+            - Crear contenido
+            - Enganchar contenido
+            - Enganchar nodo
+        */
+        // INSERTAMOS UN PÁRRAFO
+        let parrafos = parseInt(prompt("Cuantos párrafos quieres insertar: "));
+        
+        for (let i = 0; i < parrafos; i++) {
+            let nodo = document.createElement("p");
+            let texto = prompt("Dime el contenido del párrafo: ");
+            let contenido = document.createTextNode(texto);
+            nodo.appendChild(contenido);
+            document.body.appendChild(nodo); // .appendChild para "Enganchar un nodo o contenido a otro elemento"
+            }
+            
+        // INSERTAMOS UN LISTADO
+
+        let miul = document.createElement("ul");
+        let mili = document.createElement("li");
+        let contenido = document.createTextNode("Elemento1");
+        // let mip = document.getElementById("principal");
+        let mip = document.getElementsByTagName("div")
+        mili.appendChild(contenido);
+        miul.appendChild(mili);
+        mip[0].appendChild(miul);
+
+    </script>
+</body>
+</html>
